@@ -1,0 +1,6 @@
+Evaluation Metric,Value,Percentage
+Accuracy,0.8448,84.48%
+Precision,0.8587,85.87%
+Recall (Sensitivity),0.8797,87.97%
+F1-Score,0.8691,86.91%
+ROC-AUC Score,0.9182,91.82%
