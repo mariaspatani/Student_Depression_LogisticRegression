@@ -1,8 +1,31 @@
+# Python bytecode and caches
 __pycache__/
-**pycache**/
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter Notebook checkpoints
 .ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Virtual environments
 .venv/
 venv/
-*.py[cod]
-*.pyc
+env/
+ENV/
+
+# IDE configurations
 .vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Testing and coverage caches
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
