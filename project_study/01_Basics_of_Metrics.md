@@ -292,3 +292,29 @@ Example:
 ```text
 Negative → 900 samples
 Positive → 100 samples
+``
+
+If a baseline model simply predicts Negative for every single sample:
+- **Accuracy:** 900 / 1000 = 90% (looks deceptively good)
+- **Recall:** 0 / 100 = 0% (fails completely to find any positive cases)
+- **Precision:** 0%
+
+This demonstrates why accuracy alone can be misleading. In our Student Depression dataset, the distribution is:
+- **Positive class:** 58.56%
+- **Negative class:** 41.44%
+
+While relatively balanced, relying solely on accuracy still hides whether errors come from False Negatives (missed cases) or False Positives (false alarms).
+
+---
+
+# 11. Summary of Key Metric Formulas
+
+| Metric | Formula | Main Focus |
+|---|---|---|
+| **Accuracy** | (TP + TN) / (TP + TN + FP + FN) | Overall prediction correctness |
+| **Precision** | TP / (TP + FP) | Correctness of positive flags (minimizing False Positives) |
+| **Recall (Sensitivity)** | TP / (TP + FN) | Detection of actual positive cases (minimizing False Negatives) |
+| **Specificity** | TN / (TN + FP) | Detection of actual negative cases |
+| **F1-Score** | 2 * (Precision * Recall) / (Precision + Recall) | Harmonic balance between Precision and Recall |
+| **Balanced Accuracy** | (Recall + Specificity) / 2 | Unweighted average of recall across both classes |
+
