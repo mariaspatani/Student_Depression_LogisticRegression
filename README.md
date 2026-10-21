@@ -246,6 +246,20 @@ ML_Project/
 ├── notebooks/
 │   └── Team16_Student_Depression.ipynb
 │
+├── project_study/
+│   ├── 01_Basics_of_Metrics.md
+│   ├── 02_Dataset.md
+│   ├── 03_Logistic_Regression.md
+│   └── 04_Metric_Comparison_Guide.md
+│
+├── scripts/
+│   ├── verify_dataset.py
+│   └── metrics_summary.py
+│
+├── tests/
+│   ├── test_dataset.py
+│   └── test_metrics.py
+│
 ├── outputs/
 │   ├── graphs/
 │   ├── confusion_matrix/
@@ -257,6 +271,7 @@ ML_Project/
 │
 └── presentation/
     └── Team16_Presentation.pptx
+```
 
 ---
 
@@ -325,6 +340,28 @@ The notebook follows the complete machine learning pipeline:
 9. Model Prediction
 10. Model Evaluation
 11. Investigation and Analysis
+
+---
+
+## Running Verification Scripts & Unit Tests
+
+### 1. Dataset Verification
+Validate dataset shape, column schema, and class distribution:
+```bash
+python scripts/verify_dataset.py
+```
+
+### 2. Comprehensive Metrics Summary
+Display confusion matrix counts and detailed performance metrics:
+```bash
+python scripts/metrics_summary.py
+```
+
+### 3. Unit Tests
+Run automated unit tests for dataset integrity and metric calculations:
+```bash
+python -m unittest discover tests
+```
 
 ---
 
