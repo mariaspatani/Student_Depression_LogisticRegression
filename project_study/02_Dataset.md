@@ -213,7 +213,7 @@ This helps us identify whether a column contains:
 - Other data types
 
 This is important because machine learning models generally require numerical input.
-
+The dataset inspection stage helps us understand the structure, quality, and characteristics of the data before preprocessing. It also helps identify potential issues that could affect model evaluation.
 ---
 
 # 7. Missing Values
@@ -311,6 +311,8 @@ This makes other metrics such as:
 important for our investigation.
 
 We should calculate the actual class distribution rather than assuming that the dataset is balanced or imbalanced.
+
+Visualizing the target distribution using a bar chart makes it easier to compare the number of observations in each class. This helps us understand the dataset before selecting appropriate evaluation metrics.
 
 ---
 
@@ -533,6 +535,8 @@ Testing Data  → Apply preprocessing
 
 This helps keep the test data unseen during training.
 
+To maintain a fair evaluation, preprocessing parameters should be learned from the training data only. The test data should be used to evaluate the trained model without influencing the training process.
+
 ---
 
 # 19. Dataset Limitations
@@ -635,6 +639,7 @@ After preprocessing, we will train a classification model and generate predictio
 
 Then we will evaluate the **same model/predictions** using multiple evaluation metrics.
 
+For a fair comparison, all evaluation metrics should be calculated using the same test dataset and the same model predictions. This ensures that differences in interpretation arise from the metrics being used rather than changes in the model or test data.
 The planned metrics are:
 
 1. Accuracy
